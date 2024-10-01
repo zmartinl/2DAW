@@ -1,0 +1,82 @@
+<!-- Zeus Martin Llera -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/img/favicon.png">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <table id="tablaForm">
+                <tr>
+                    <td>
+                        <a href="formulario.html">Formulario</a>
+                    </td>
+                    <td>
+                        <a href="index.html">Volver Inicio</a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+        <main>
+            <div id="cabeceraForm">
+                <h1>Formulario de Desastres Naturales
+                </h1>
+                <br>
+                <p>
+                    Este formulario te permite hacer una aportación económica a los estudios sobre el desastre natural seleccionado. Tu contribución ayudará a financiar investigaciones y proyectos relacionados con la prevención, mitigación y recuperación de desastres naturales.
+                    <br><br>
+                    Por favor, completa el formulario a continuación con tus datos personales y la cantidad que deseas donar. Tu generosidad será de gran ayuda para enfrentar los desafíos que representan los desastres naturales y proteger a las comunidades afectadas.
+                </p>
+            </div>
+            <h1 id="tituloForm">Contacta Con Nosotros</h1>
+            <div>
+                
+            </div>
+            <form method="POST" action="datos.php">
+                <div>
+                    <label for="nombre">Nombre</label><span></span>
+                    <input type="text" id="nombre" name="nombre"><span></span>
+                    <label for="apellidos">Apellidos</label><span></span>
+                    <input type="text" id="apellidos" name="apellidos"><span></span>
+                    <label for="">Sexo</label><span></span>
+                    <input type="radio" id="hombre" name="sexo" value="hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" id="otro" name="sexo" value="otro">
+                    <label for="otro">Otro</label><span></span>
+                    <br>
+                    <label for="correo">Correo Electronico</label><span></span>
+                    <input type="email" id="correo" name="correo"><span></span>
+                    <label for="desastre">Desastre a apoyar</label>
+                    <select name="desastre" id="desastre">
+                        <option value="calorExtremo">Calor Extremo</option>
+                        <option value="inundacion">Inundación</option>
+                        <option value="huracan">Huracán</option>
+                        <option value="incendio">Incendio Forestales</option>
+                    </select><span></span>
+                    <br>
+                    <label for="info">Desastres a recibir informacion</label><span></span>
+                    <br>
+                    <input type="checkbox" name="info[]" value="huracanes">
+                    <label for="helphuracan">Ayudar a Huracanes</label><span></span>
+                    <input type="checkbox" name="info[]" value="inundaciones">
+                    <label for="helpinundacion">Ayudar a Inundaciones</label><span></span>
+                    <input type="checkbox" name="info[]" value="calorExtrema">
+                    <label for="helpCalor">Ayudar a Calor Extremo</label><span></span>
+                    <input type="checkbox" name="info[]" value="incendiosForestales">
+                    <label for="helpIncendio">Ayudar Incendio Forestales</label><span></span>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </main>
+        <footer id="pie">
+            <h1>AYUDA AL CAMBIO CLIMATICO</h1>
+        </footer>
+    </body>
+</html>
