@@ -1,0 +1,233 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; /* Quitar el scroll en firefox */
+}
+
+.parallax{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+}
+
+.parallax:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #000522, transparent);
+    z-index: 1;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.parallax2:before{
+    background: linear-gradient(to top, #000000, transparent);
+    z-index: 3;
+}
+
+
+#text{
+    font-size: 10vw;
+    position: relative;
+    color: #fff;
+    font-size: 11vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Termina el parallax */
+.sec{
+    position: relative;
+    min-height: 500px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6%;
+    width: 37vw;
+    height: 23vh;
+    border-radius: 30px;
+    background: #cdc9c9;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+}
+
+.card>h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #000000;
+    letter-spacing: 0.5rem;
+}
+
+.card>button{
+    width: 100%;
+    height: 3vh;
+    border: none;
+    color: black;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #cdc9c9;
+    box-shadow:  -20px 20px 60px rgba(0, 0, 0, 0.2),
+                20px -20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.card>button:hover{
+    background: #191818;
+    color: white;
+    transition: 1.5s;
+}
+
+.card>h1>span{
+    color: red;
+}
+
+@media (min-width: 767px) {
+    .sec{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sec .card .card-text p{
+        text-align: center;
+    }
+}
+
+.sec h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #20496a;
+}
+
+.sec p{
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+/* Horizontal */
+.no-container{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.no-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll horizontal en chrome safari explorer*/
+}
+
+.no-container {
+    scrollbar-width: none; /* Oculta la barra de scroll horizontal */
+}
+
+
+.container{
+    width: 100vh;
+    height: 100vw;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100vh);
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll vertical */
+}
+
+.container {
+    scrollbar-width: none; /* Oculta la barra de scroll vertical */
+}
+
+.wrapper{
+    display: flex;
+    width: 300vw;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-100vh);
+    scroll-snap-type: y mandatory;
+}
+
+.slide{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide:nth-child(1){
+    background: rgb(5, 5, 5);
+    background-size: cover;
+    background-attachment: fixed;
+    text-transform: uppercase;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 7%;
+    min-width: 100vh;
+    justify-items: center;
+}
+
+.slide:nth-child(2){
+    background-color: #f7c110;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.slide:nth-child(3){
+    background-color: blue;
+}
+
+.blur{
+    filter: blur(2px);
+}
+
+/* display: flex;
+    justify-content: center;
+    align-items: center; */
