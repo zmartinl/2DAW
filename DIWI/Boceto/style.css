@@ -1,0 +1,53 @@
+/*Comentar todos los width*/
+
+html{
+    width: 1260px;
+}
+
+body{
+    height: 500px;
+    margin-top: 45px;
+}
+
+/* MAIN */
+
+main{
+    width: 1260px;
+    height: 400px;
+    background-color: blueviolet;
+}
+
+div:nth-of-type(1){
+    float: left;
+    width: 780px; /* 800px - 20px del padding left right*/
+    height: 340px; /* 340px - 60px del padding top bottom*/
+    margin: 0 20px;
+    padding: 30px 10px;
+    background-color: skyblue;
+}
+
+form{
+    margin-top: 200px;
+    margin-left: 180px;
+}
+
+div:nth-of-type(2){
+    float: left;
+    width: 370px; /* 400px - 30px del padding left */
+    height: 300px;
+    padding: 50px 0 50px 30px;
+    background-color: yellow;
+}
+
+img{
+    width: 150px;
+}
+
+/* FOOTER */
+
+footer{
+    width: 1260px;
+    clear: both;
+    height: 100px;
+    background-color: red;
+}
