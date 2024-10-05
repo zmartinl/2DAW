@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes sobre un tema</title>
+    <link rel="stylesheet" href="unidades.css">
+    <link rel="stylesheet" href="./script.js">
+</head>
+<body>
+    <header>
+        <button class="custom-button" onclick="location.href='../../index.html'">Inicio</button>
+        <h1>UNIDAD 1</h1>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="" class="rojo">SOON</a></li>
+                    <li><a href="" class="rojo">SOON</a></li>
+                    <li><a href="" class="rojo">SOON</a></li>
+                    <li><a href="" class="rojo">SOON</a></li>
+                    <li><a href="" class="rojo">SOON</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="content">
+            <article>
+                <h1 class="naranja">GIT</h1>
+                <h2>Introducción a GIT</h2>
+                <h3>¿Que es GIT?</h3>
+                <p>
+                    Git es un SERVICIO (estándar) de comunicación y gestión de
+                    información entre local y remoto. Es un sistema de control de versiones distribuido, gratuito y de código abierto.
+                </p>
+                <p>
+                    Registro los cambios en un archivo o proyecto, definiendo
+                    diferentes versiones, que pudieran recuperarse de manera
+                    específica.
+                </p>
+                <p>
+                    Varios IDEs (Entornos de Desarrollo Integrados) como Visual Studio Code, Atom, Sublime Text, entre otros, tienen integración con Git, lo que facilita el uso de este sistema de control de versiones.
+                </p>
+                <h2>Control de versiones</h2>
+                <h3>Centralizado</h3>
+                <p>
+                    En un sistema de control de versiones centralizado, los archivos se almacenan en un servidor central. Los usuarios obtienen una copia de los archivos y los modifican en su computadora local. Cuando los usuarios desean compartir sus cambios, los envían al servidor central.
+                </p>
+                <h3>Distribuido</h3>
+                <p>
+                    En un sistema de control de versiones distribuido, cada usuario tiene una copia local de los archivos y el historial de cambios. Los usuarios pueden trabajar de forma independiente y enviar sus cambios a otros usuarios. Los cambios se pueden fusionar de forma automática.
+                </p>
+                <h2 class="titcentrado">Areas</h2>
+                <div class="gridlayout">
+                    <div>
+                        <h3>Directorio de Trabajo</h3>
+                        <p>
+                            Es el directorio de trabajo, donde se encuentran los archivos que se están editando.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Staging Area</h3>
+                        <p>
+                            Es el área de preparación, donde se encuentran los archivos que se van a enviar al repositorio.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Repositorio Local</h3>
+                        <p>
+                            Es el repositorio que se encuentra en local. Aquí es donde se almacenan los cambios confirmados antes de ser enviados a un repositorio remoto.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Repositorio Remoto</h3>
+                        <p>
+                            Aquí es donde se almacenan los cambios confirmados que se han enviado desde el repositorio local.
+                        </p>
+                    </div>
+                </div>
+                <h2>Los 5 estados de GIT ( ficheros )</h2>
+                <div class="estadosflex">
+                    <div>
+                        <h3>Untracked</h3>
+                        <p>
+                            El fichero no está bajo el control de versiones. No está en el repositorio.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Unmodified</h3>
+                        <p>
+                            El fichero está en el repositorio pero no ha sido modificado desde su última versión confirmada.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Modified</h3>
+                        <p>
+                            los datos/ficheros se han modifcado, pero todavía no lo has confirmado a tu base de datos,
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Staged</h3>
+                        <p>
+                            se ha marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Commited</h3>
+                        <p>
+                            los datos/ficheros están almacenados de manera segura en tu base de datos local.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
