@@ -191,7 +191,65 @@
                     git tag -a v1.0 -m "Versión 1.0" <span class="verde">/* Crea una etiqueta anotada */</span><br>
                     git tag -d v1.0 <span class="verde">/* Elimina una etiqueta */</span><br>
                 </p>
-
+                <h2>Trabajando con Ramas</h2>
+                <p>
+                    Las ramas son una característica importante de Git. Son una forma de separar el trabajo que se está realizando en diferentes líneas de desarrollo. Las ramas permiten trabajar en diferentes características de un proyecto sin afectar la rama principal.
+                </p>
+                <h3>Listar, Crear, Borrar ramas</h3>
+                <p class="cardcomando">
+                    git branch <span class="verde">/* Muestra las ramas locales */</span><br>
+                    git branch &lt;nombreRama&gt; <span class="verde">/* Crea una rama */</span><br>
+                    git branch -a <span class="verde">/* Muestra todas las ramas */</span><br>
+                    git branch -d &lt;nombreRama&gt; <span class="verde">/* Elimina una rama */</span><br>
+                    git branch -m &lt;oldName&gt; &lt;newName&gt; <span class="verde">/* Renombra una rama */</span>
+                </p>
+                <h3>IDs de los commits del repositorio local</h3>
+                <p class="cardcomando">
+                    git log <span class="verde">/* Muestra los IDs de los commits del repositorio local */</span><br>
+                    git log -p <span class="verde">/* Incluye el historial de las confirmaciones, incluyendo todos los archivos y sus cambios */</span><br>
+                    git log --oneline <span class="verde">/* Muestra los IDs de los commits en una sola línea */</span><br>
+                    git log --oneline --all <span class="verde">/* Muestra los IDs de los commits de todas las ramas en una sola línea */</span>
+                </p>
+                <h3>Movimiento entre Ramas</h3>
+                <p class="cardcomando">
+                    git checkout &lt;nombreRama&gt; <span class="verde">/* Cambia a la rama especificada */</span><br>
+                    git checkout -b &lt;nombreRama&gt; <span class="verde">/* Crea una rama y cambia a ella */</span><br>
+                    git checkout &lt;hash&gt; <span class="verde">/* Volver a cualquier version anterior en base al hash */</span>
+                </p>
+                <h3>Fusionar Ramas</h3>
+                <p class="cardcomando">
+                    git merge &lt;nombreRama&gt; <span class="verde">/* Fusiona la rama especificada con la rama actual */</span><br>
+                    git merge --abort <span class="verde">/* Aborta la fusión de ramas */</span><br>
+                    git log --merge <span class="verde">/* Muestra la información de los 2 commits que han generado el conflicto */</span>
+                </p>
+                <h2>Empezando a funcionar</h2>
+                <p class="cardcomando">
+                    git clone &lt;remote-repo&gt; &lt;directorio-local&gt; <span class="verde">/* Se usa para copiar un repositorio remoto en local */</span><br>
+                    git clone --branch &lt;tag&gt; &lt;remote-repo&gt; <span class="verde"> se usa para copiar únicamente la version de la tag indicada </span><br>
+                    git clone --branch --single-branch &lt;branch_name&gt; &lt;remote_repo&gt; <span class="verde">/* Se usa para copiar únicamente la rama indicada */</span>
+                </p>
+                <h2>Traer Cambios</h2>
+                <div class="estadosflex">
+                    <div>
+                        <h3>Git Pull</h3>
+                        <p>
+                            Trae los cambios del repositorio remoto y los fusiona con el repositorio local.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Git Merge</h3>
+                        <p>
+                            Fusiona los cambios de una rama con la rama actual.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Git Fetch</h3>
+                        <p>
+                            Trae los cambios del repositorio remoto pero no los fusiona con el repositorio local.
+                        </p>
+                    </div>
+                </div>
+                <h2>Bajar datos del repositorio remoto</h2>
             </article>
         </section>
     </main>
