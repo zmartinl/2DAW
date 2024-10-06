@@ -209,6 +209,21 @@ article>h1{
     color: rgb(240, 117, 16);
 }
 
+.verde{
+    color: green;
+}
+
+.cardcomando{
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 2%;
+    margin: 3%;
+    padding-left: 4%;
+}
+
+
+
 /* Boton volver inicio*/
 
 .custom-button {

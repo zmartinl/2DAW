@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apuntes sobre un tema</title>
     <link rel="stylesheet" href="unidades.css">
-    <link rel="stylesheet" href="./script.js">
 </head>
 <body>
     <header>
@@ -77,7 +76,7 @@
                         </p>
                     </div>
                 </div>
-                <h2>Los 5 estados de GIT ( ficheros )</h2>
+                <h2 class="titcentrado">Los 5 estados de GIT ( ficheros )</h2>
                 <div class="estadosflex">
                     <div>
                         <h3>Untracked</h3>
@@ -110,7 +109,46 @@
                         </p>
                     </div>
                 </div>
-                
+                <br>
+                <h2>Configuración Inicial</h2>
+                <p class="cardcomando">
+                    git --version <span class="verde">/* Te dice la version actual de git */</span>
+                </p>
+                <p class="cardcomando">
+                    git config --list <span class="verde">/* Muestra la configuración actual de git */</span>
+                </p>
+                <p class="cardcomando">
+                    git config --global user.name "Tu nombre" <span class="verde">/* Configura el nombre de usuario */</span><br>
+                    git config --global user.email "Tu correo" <span class="verde">/* Configura el correo de usuario */</span>
+                </p>
+                <h2>Comandos Básicos</h2>
+                <p class="cardcomando">
+                    git help &lt;comando&gt; <span class="verde">/* Muestra la ayuda del comando que se le indique. */</span>
+                </p>
+                <p class="cardcomando">
+                    git init <span class="verde">/* Inicializa un repositorio git */</span>
+                </p>
+                <h3>Subir Cambios</h3>
+                <p class="cardcomando">
+                    git add &lt;archivo&gt; <span class="verde">/* Añade un archivo al área de preparación */</span><br>
+                    git add . <span class="verde">/* Añade todos los archivos al área de preparación */</span><br>
+                    git add .html <span class="verde">/* Añade todos los archivos con extensión .html al área de preparación */</span>
+                </p>
+                <p class="cardcomando">
+                    git commit -m "Mensaje" <span class="verde">/* Confirma los cambios con un mensaje */</span><br>
+                    git commit --amend -m "Mensaje" <span class="verde">/* Agrega cambios al ultimo commit */</span>
+                </p>
+                <p class="cardcomando">
+                    git push <span class="verde">/* Sube los cambios al repositorio remoto */</span>
+                </p>
+                <h2>Empezando a funcionar</h2>
+                <p class="cardcomando">
+                    git status <span class="verde">/* Muestra el estado actual del repositorio */</span>
+                </p>
+                <p class="cardcomando">
+                    git log <span class="verde">/* Historial de commits extendido */</span><br>
+                    git log --oneline <span class="verde">/* Historial de commits en una sola linea */</span><br>
+                </p>
             </article>
         </section>
     </main>
