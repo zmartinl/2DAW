@@ -1,0 +1,73 @@
+/* Zeus Martin Llera - DWES - Diario de Aprendizaje - | Ejercicios Iniciales |*/
+
+// 20/09/2024
+
+Factorial Prueba - Iniciamos con PHP 
+
+    v1:
+        Tabla estática y creación de función en PHP calculando el factorial (1-10)
+    v2: 
+        Tabla dinámica a través de un formulario con dos elementos: introduce inicio y final y otro de enviar
+    v3:
+        Separación de páginas.
+            1 - Introduce los dos números y envía
+            2 - Pasa a otra página y visualiza la tabla dinámica con el rango que hemos introducido anteriormente
+
+---- Carpeta: C:\xampp\htdocs\2daw\DWES\ejerciciosIniciales\factorialPrueba
+
+// 23/09/2024
+
+Prueba de Arrays - Probamos como van los array a través de los apuntes
+
+---- Carpeta: C:\xampp\htdocs\2daw\DWES\ejerciciosIniciales\arrays\ejPrueba
+
+// 25/09/2024
+
+Factorial - Prueba de arrays con factorial
+
+    v1:
+        Creamos tres ficheros: 1 mostrarArray.php 2 guardarArray.php 3 funciones.php
+            funciones.php - Función reutilizada de FactorialPrueba
+            guardarArray.php - Guardaremos un array estático que introducimos nosotros a través de un bucle
+            mostrarArray.php - Muestra el array generado en la anterior página introducido en una tabla creada
+    v1-1:
+        Misma versión pero dividida en dos ficheros: 1 factorial.php 2 funciones.php
+            funciones.php - Función reutilizada de FactorialPrueba
+            factorial.php - Guarda y muestra array estático
+    v2:
+        Versión dinámica de array con cuatro ficheros: 1 funciones.php 2 mostrarArray.php 3 guardarArray.php 4 index.php
+            funciones.php - Función reutilizada de FactorialPrueba
+            index.php - Introduce en un formulario el inicio y el fin
+            guardarArray.php - Guarda el array con los valores introducidos en index.php
+            mostrarArray.php - Muestra el array
+
+---- Carpeta: C:\xampp\htdocs\2daw\DWES\ejerciciosIniciales\arrays\ej1_factorial
+
+Prueba de Imágenes - Guardado de imágenes en un array
+
+    Empezamos con array asociativos a traves de las imágenes.
+    Uso de figure con el array de dos valores: nombre y enlace
+
+---- Carpeta: C:\xampp\htdocs\2daw\DWES\ejerciciosIniciales\arrays\pruebaImagenes
+
+// 01/10/2024
+
+Paso Parametros URL - Probamos a través del $_GET pasar parámetros por URL dos variables y estudiamos como funciona el ? y &
+
+    ? - separación de url y paso de parámetros
+    & - separación entre varias variables
+
+    Ejemplo: https://www.hola.com/quien-soy?name=Javier&edad=20
+
+---- Carpeta: C:\xampp\htdocs\2daw\DWES\ejerciciosIniciales\formularios\pruebaParametrosURL
+
+// 02/10/2024 
+
+Factorial Enlaces - Paso de Factorial por enlace y repaso del paso de parámetros de URL
+
+    3 ficheros: 1 funciones.php 2 ver_factorial.php 3 index.php
+        funciones.php - Función de factorial reutilizada de FactorialPrueba
+        index.php - Creamos un bucle llamando al fichero funciones.php con los enlace, haciendo el factorial en el mismo paso de parámetros
+        ver_factorial.php - Muestra lo enviado por URL a través de $_GET
+
+---- Carpeta: C:\xampp\htdocs\2daw\DWES\ejerciciosIniciales\arrays\factorial_enlaces
