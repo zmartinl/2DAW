@@ -140,6 +140,7 @@
                 </p>
                 <p class="cardcomando">
                     git push <span class="verde">/* Sube los cambios al repositorio remoto */</span>
+                    git push -u origin master <span class="verde">/* Sube los cambios al repositorio remoto */</span>
                 </p>
                 <h2>Empezando a funcionar</h2>
                 <p class="cardcomando">
@@ -148,6 +149,47 @@
                 <p class="cardcomando">
                     git log <span class="verde">/* Historial de commits extendido */</span><br>
                     git log --oneline <span class="verde">/* Historial de commits en una sola linea */</span><br>
+                </p>
+                <p class="cardcomando">
+                    git diff <span class="verde">/* Muestra las diferencias entre el directorio de trabajo y el área de preparación */</span><br>
+                    git diff --staged <span class="verde">/* Muestra las diferencias entre el área de preparación y el último commit */</span>
+                </p>
+                <p class="cardcomando">
+                    git remote <span class="verde">/* Muestra una lista con los nombre remotos que hayas especificado */</span><br>
+                    git remote -v <span class="verde">/* Muestra la URL de los repositorios remotos */</span><br>
+                    git remote add origin &lt;url&gt; <span class="verde">/* Añade un repositorio remoto */</span><br>
+                    git remote remove origin <span class="verde">/* Elimina un repositorio remoto */</span><br>
+                    git remote show origin <span class="verde">/* Muestra información detallada de un repositorio remoto */</span><br>
+                    git remote rename origin nuevoNombre <span class="verde">/* Renombra un repositorio remoto */</span>
+                </p>
+                <p class="cardcomando">
+                    git branch -M main <span class="verde">/* Cambia el nombre de la rama master a main */</span><br>
+                    git branch <span class="verde">/* Muestra las ramas locales */</span><br>
+                    git branch -a <span class="verde">/* Muestra todas las ramas */</span><br>
+                    git branch -d &lt;nombreRama&gt; <span class="verde">/* Elimina una rama */</span><br>
+                    git branch -m &lt;nombreRama&gt; <span class="verde">/* Renombra una rama */</span>
+                </p>
+                <h2>Rollback</h2>
+                <p class="cardcomando">
+                    git checkout &lt;nombreRama&gt; <span class="verde">/* Cambia a la rama especificada */</span><br>
+                    git checkout -b &lt;nombreRama&gt; <span class="verde">/* Crea una rama y cambia a ella */</span>
+                </p>
+                <p class="cardcomando">
+                    git reset HEAD &lt;archivo&gt; <span class="verde">/* Quita los archivos de staged y los devuelve a estado anterior */</span><br>
+                    git reset --soft &lt;hash&gt; <span class="verde">/* Mueve el HEAD al commit especificado */</span><br>
+                    git reset --hard &lt;hash&gt; <span class="verde">/* Mueve el HEAD al commit especificado y borra los cambios en el directorio de trabajo */</span><br>
+                    git reset --mixed &lt;hash&gt; <span class="verde">/* Mueve el HEAD al commit especificado y borra los cambios en el área de preparación */</span>
+                </p>
+                <p class="cardcomando">
+                    git revert &lt;hash&gt; <span class="verde">/* Crea un nuevo commit que revierte los cambios de un commit especificado */</span><br>
+                    git revert HEAD <span class="verde">/* Crea un nuevo commit que revierte los cambios del último commit */</span><br>
+                    git revert HEAD~2 <span class="verde">/* Crea un nuevo commit que revierte los cambios de los dos últimos commits */</span>
+                </p>
+                <h2>Etiquetas</h2>
+                <p class="cardcomando">
+                    git tag <span class="verde">/* Muestra las etiquetas */</span><br>
+                    git tag -a v1.0 -m "Versión 1.0" <span class="verde">/* Crea una etiqueta anotada */</span><br>
+                    git tag -d v1.0 <span class="verde">/* Elimina una etiqueta */</span>
                 </p>
             </article>
         </section>
