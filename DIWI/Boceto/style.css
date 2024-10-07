@@ -1,5 +1,10 @@
 /*Comentar todos los width*/
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html{
     width: 1260px;
 }
@@ -9,13 +14,18 @@ body{
     margin-top: 45px;
 }
 
+form>div{
+    text-align: center;
+}
+
 /* MAIN */
 
 main{
     width: 1260px;
     /* height: 400px; */
     background-color: blueviolet;
-    overflow: hidden;
+    /* overflow: hidden; */
+    display: flow-root;
 }
 
 div:nth-of-type(1){
@@ -29,6 +39,7 @@ div:nth-of-type(1){
 
 form{
     padding-left: 70px;
+    border: solid 1px black;
 }
 
 input[type="text"]{
@@ -39,7 +50,6 @@ input[type="text"]{
 
 input[type="submit"]{
     width: 150px;
-    
 }
 
 div:nth-of-type(2){
