@@ -47,7 +47,7 @@ main{
 
 form{
     margin-top: 4em;
-    padding-left:1em 0 1em 70px;
+    padding: 1em 0 1em 70px;
     border: solid 1px black;
 }
 
