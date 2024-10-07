@@ -1,5 +1,3 @@
-/*Comentar todos los width*/
-
 *{
     margin: 0;
     padding: 0;
@@ -12,13 +10,10 @@ html{
 body{
     height: 500px;
     margin-top: 45px;
+    font-size: 15px;
 }
 
-form>div{
-    text-align: center;
-}
-
-/* MAIN */
+/* ------- MAIN ------- */
 
 main{
     width: 1260px;
@@ -28,7 +23,9 @@ main{
     display: flow-root;
 }
 
-div:nth-of-type(1){
+/* ------- CAJAS ------- */
+
+#izq{ /* Caja izquierda */
     float: left;
     width: 780px; /* 800px - 20px del padding left right*/
     height: 340px; /* 340px - 60px del padding top bottom*/
@@ -37,22 +34,7 @@ div:nth-of-type(1){
     background-color: skyblue;
 }
 
-form{
-    padding-left: 70px;
-    border: solid 1px black;
-}
-
-input[type="text"]{
-    width: 500px;
-    padding-left: 10px;
-    display: block;
-}
-
-input[type="submit"]{
-    width: 150px;
-}
-
-div:nth-of-type(2){
+#der{ /* Caja derecha */
     float: left;
     width: 370px; /* 400px - 30px del padding left */
     height: 300px;
@@ -60,8 +42,38 @@ div:nth-of-type(2){
     background-color: yellow;
 }
 
+/* ------- ELEMENTOS DEL LAYOUT ------- */
+/* Elementos de la caja izquierda */
+
+form{
+    margin-top: 4em;
+    padding-left:1em 0 1em 70px;
+    border: solid 1px black;
+}
+
+form>div{
+    text-align: center;
+}
+
+input[type="text"]{
+    width: 490px; /* 500 - 10px del padding left */
+    padding-left: 10px;
+    display: block;
+    height: 2em;
+    margin: 1em 0;
+}
+
+input[type="submit"]{
+    width: 150px;
+    height: 2em;
+    cursor: pointer;
+}
+
+/* Elementos de la caja derecha */
+
 img{
     width: 150px;
+    height: auto;
 }
 
 /* FOOTER */
