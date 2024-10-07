@@ -7,9 +7,15 @@
     font-family: "Poppins", sans-serif;
 }
 html{
+    width: 100%;
     font-size: 62.5%; /* 1rem = 10px */
     scroll-snap-type: y mandatory;
     scrollbar-width: none; /* Quitar el scroll en firefox */
+}
+
+html body{
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .parallax{
@@ -59,13 +65,27 @@ html{
 }
 
 /* Termina el parallax */
+
 .sec{
-    position: relative;
-    min-height: 500px;
+    width: 100%;
+    margin: 0 auto;
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+
+.sec h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #20496a;
+}
+
+.sec p{
+    font-size: 1.2rem;
+    color: white;
 }
 
 .card{
@@ -112,33 +132,18 @@ html{
     color: red;
 }
 
-@media (min-width: 767px) {
-    .sec{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .sec .card .card-text p{
-        text-align: center;
-    }
+.card>button>span{
+    color: red;
 }
 
-.sec h2{
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 10px;
-    color: #20496a;
+.container{
+    width: 100%;
+    margin: 0 auto;
 }
-
-.sec p{
-    font-size: 1.2rem;
-    color: white;
-}
-
 
 /* Horizontal */
 .no-container{
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     scroll-snap-align: center;
@@ -179,6 +184,89 @@ html{
     filter: blur(2px);
 }
 
-/* display: flex;
-    justify-content: center;
-    align-items: center; */
+/* Media Query para telefonos */
+@media (max-width: 600px) {
+    html {
+        font-size: 50%; /* Reducir el tamaño base del texto a 1rem = 8px */
+    }
+
+    #text {
+        font-size: 7vw; /* Ajuste del tamaño del título principal */
+    }
+
+    .sec {
+        grid-template-columns: 1fr; /* Mostrar las tarjetas en una sola columna */
+        padding: 10px;
+    }
+
+    .card {
+        width: 80vw; /* Ancho de las tarjetas adaptado a pantallas más pequeñas */
+        height: auto; /* Ajuste de la altura de las tarjetas */
+        padding: 20px; /* Reducir el padding */
+    }
+
+    .card > h1 {
+        font-size: 2em; /* Reducir el tamaño del título en las tarjetas */
+    }
+
+    .card > button {
+        font-size: 1rem; /* Tamaño del texto de los botones */
+        height: 5vh; /* Altura del botón adaptada */
+    }
+}
+
+/* Media Query para tablets */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    html {
+        font-size: 55%; /* Ajustar la escala del texto a 1rem = 8.8px */
+    }
+
+    #text {
+        font-size: 8vw; /* Ajustar el tamaño del título */
+    }
+
+    .sec {
+        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila */
+        padding: 20px;
+    }
+
+    .card {
+        width: 60vw; /* Ajustar el ancho de las tarjetas */
+        height: 25vh; /* Altura ajustada de las tarjetas */
+    }
+
+    .card > h1 {
+        font-size: 2.5em; /* Reducir ligeramente el tamaño del título */
+    }
+
+    .card > button {
+        font-size: 1.2rem; /* Botón ligeramente más pequeño */
+        height: 4vh;
+    }
+}
+
+/* Media Query para pantallas grandes */
+
+@media (min-width: 1025px) {
+    html {
+        font-size: 62.5%; /* Restablecer el tamaño base de 1rem = 10px */
+    }
+
+    .sec {
+        grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+    }
+
+    .card {
+        width: 37vw;
+        height: 23vh;
+    }
+
+    .card > h1 {
+        font-size: 3em;
+    }
+
+    .card > button {
+        font-size: 1.3rem;
+    }
+}
