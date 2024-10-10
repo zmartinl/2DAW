@@ -1,6 +1,6 @@
 <?php
     class DiasAño{
-        public $mesesDias;
+        private $mesesDias;
         function __construct($año) {
             $this->mesesDias = array(
                 1 => array(
@@ -55,9 +55,10 @@
         }
 
         private function calcularBisiesto($año){
-            if($año % 4 == 0 && ($año % 100 != 0 || $año % 400 == 0)){
-                return true;
-            }
-            return false;
+            return ($año % 4 == 0 && ($año % 100 != 0 || $año % 400 == 0));
+        }
+
+        public function getMesesDias($mes){
+            return $this->mesesDias[$mes];
         }
     }

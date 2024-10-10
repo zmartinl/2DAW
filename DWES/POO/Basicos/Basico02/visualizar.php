@@ -20,8 +20,8 @@
     <body>
         <p>
             <?php
-                echo 'La fecha introducida es: '.$dia.' de '.$objDiasAño->mesesDias[$mes]['mes'].' de '.$año.'
-                <br> Febrero tiene: '.$objDiasAño->mesesDias[2]['dias'].' dias';
+                echo 'La fecha introducida es: '.$dia.' de '.$objDiasAño->getMesesDias($mes)['mes'].' de '.$año.'
+                <br> Febrero tiene: '.$objDiasAño->getMesesDias(2)['dias'].' dias';
             ?>
         </p>
     </body>
