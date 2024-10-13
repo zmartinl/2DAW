@@ -14,12 +14,7 @@ window.addEventListener('load', () => {
     }
 
     function mayorArray(numeros) {
-        let mayor = numeros[0];
-        for (let i = 1; i < numeros.length; i++) { 
-            if (numeros[i] > mayor) {
-                mayor = numeros[i];
-            }
-        }
+        let mayor = Math.max(...numeros);
         alert(`El mayor es: ${mayor}`);
     }
     
