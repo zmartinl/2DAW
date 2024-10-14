@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: 0
-        },1300);
+        },1900);
         return false;
     });
 
