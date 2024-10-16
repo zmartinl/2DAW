@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
             if(numero > 0) positivos++;
             if(numero % 15 === 0) multiplos15++;
         }
+        
         let sumaPares = numeros.reduce((acumulador,numero) => acumulador + numero,0);
 
         alert(`Numeros Positivos: ${positivos}, Numeros Negativos: ${negativos}, Numeros multipos de 15: ${multiplos15} y la suma de los pares es de: ${sumaPares}`);
