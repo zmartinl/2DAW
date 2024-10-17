@@ -45,7 +45,7 @@ main{
     background-color: yellow;
     position: sticky; /* Posicionamiento fijo */
     top: 380px; /* Se mantendrá a 100px desde la parte superior del navegador */
-    right: 140px; /* Alineada 140px desde el borde derecho de la ventana */
+    right: 900px; /* Alineada 140px desde el borde derecho de la ventana */
 }
 
 /* ------- ELEMENTOS DEL LAYOUT ------- */
