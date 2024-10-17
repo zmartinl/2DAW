@@ -17,7 +17,7 @@ body{
 
 main{
     width: 1260px;
-    /* height: 400px; */
+    /* height: 1300px; */
     background-color: blueviolet;
     /* overflow: hidden; */
     display: flow-root;
@@ -37,26 +37,9 @@ main{
 #der{ /* Caja derecha */
     float: left;
     width: 370px; /* 400px - 30px del padding left */
-    height: 300px;
+    height: 1300px; /* Le añadimos altura para poder hacer el scroll */
     padding: 50px 0 50px 30px;
     background-color: yellow;
-}
-
-#der>div:nth-of-type(1){
-    background-color: black;
-    position: absolute;
-    top: 90px;
-    left: 870px;
-    width: 150px;
-    height: 150px;
-}
-
-#der>div:nth-of-type(2){
-    background-color: white;
-    position: fixed;
-    width: 150px;
-    top: 100px;
-    text-align: center;
 }
 
 /* ------- ELEMENTOS DEL LAYOUT ------- */
@@ -88,9 +71,19 @@ input[type="submit"]{
 
 /* Elementos de la caja derecha */
 
-img{
-    width: 150px;
-    height: auto;
+#uno {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+#dos {
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    position: sticky; /* Para que se quede fijo */
+    top: 0; /* Para que cuando llegue a la parte de arriba del div #der pare */
 }
 
 /* FOOTER */

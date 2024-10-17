@@ -40,23 +40,45 @@ main{
     height: 300px;
     padding: 50px 0 50px 30px;
     background-color: yellow;
+    position: relative;
+    top: 50px; /* Se separa de arriba sobre si mismo ya que es position relative*/
+    left: 50px; /* Se separa de la izq sobre si mismo ya que es position relative*/
 }
 
-#der>div:nth-of-type(1){
-    background-color: black;
-    position: absolute;
-    top: 90px;
-    left: 870px;
+#der>div{
+    position: absolute; /* Ponemos los divs position absolute para comprobar que se posicionan segun su padre al ser relative */
+}
+
+#roja{
+    background-color: rgb(255, 0, 0,0.7);
     width: 150px;
     height: 150px;
+    top: 20px;
+    left: 20px;
 }
 
-#der>div:nth-of-type(2){
-    background-color: white;
-    position: fixed;
+#verde{
+    background-color: rgb(255, 0, 0,0.7);
     width: 150px;
-    top: 100px;
-    text-align: center;
+    height: 150px;
+    top: 20px;
+    left: 20px;
+}
+
+#verde{
+    background-color: rgba(35, 255, 1, 0.7);
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    left: 80px;
+}
+
+#azul{
+    background-color: rgba(0, 8, 255, 0.7);
+    width: 150px;
+    height: 150px;
+    top: 140px;
+    left: 140px;
 }
 
 /* ------- ELEMENTOS DEL LAYOUT ------- */

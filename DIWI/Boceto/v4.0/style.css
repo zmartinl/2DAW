@@ -17,7 +17,7 @@ body{
 
 main{
     width: 1260px;
-    /* height: 400px; */
+    height: 1400px; /* Le damos tamaño para que haga scroll para el sticky*/
     background-color: blueviolet;
     /* overflow: hidden; */
     display: flow-root;
@@ -32,6 +32,9 @@ main{
     margin: 0 20px;
     padding: 30px 10px;
     background-color: skyblue;
+    position: relative; /* Posicionamiento relativo */
+    top: 20px; /* Se moverá 20px hacia abajo desde su posición normal */
+    z-index: 2; /* Se situa por encima de la caja de la derecha */
 }
 
 #der{ /* Caja derecha */
@@ -40,23 +43,9 @@ main{
     height: 300px;
     padding: 50px 0 50px 30px;
     background-color: yellow;
-}
-
-#der>div:nth-of-type(1){
-    background-color: black;
-    position: absolute;
-    top: 90px;
-    left: 870px;
-    width: 150px;
-    height: 150px;
-}
-
-#der>div:nth-of-type(2){
-    background-color: white;
-    position: fixed;
-    width: 150px;
-    top: 100px;
-    text-align: center;
+    position: sticky; /* Posicionamiento fijo */
+    top: 380px; /* Se mantendrá a 100px desde la parte superior del navegador */
+    right: 140px; /* Alineada 140px desde el borde derecho de la ventana */
 }
 
 /* ------- ELEMENTOS DEL LAYOUT ------- */
