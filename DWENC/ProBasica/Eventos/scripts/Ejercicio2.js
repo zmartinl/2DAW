@@ -9,15 +9,15 @@ window.addEventListener('load', () => {
     const clave = document.getElementById('clave');
 
     nombre.addEventListener('focus', () => {
-        alert('El campo nombre ha recibido el enfoque');
+        console.log('El campo nombre ha recibido el enfoque');
     });
 
     nombre.addEventListener('blur', () => {
-        alert('El campo nombre ha perdido el foco');
+        console.log('El campo nombre ha perdido el foco');
     });
     
     clave.addEventListener('focus', () => {
-        alert('El campo clave ha recibido el enfoque');
+        console.log('El campo clave ha recibido el enfoque');
     });
     
     clave.addEventListener('blur', validarClave);
@@ -27,7 +27,6 @@ window.addEventListener('load', () => {
         let claveValor = clave.value;
         if (claveValor.length < 7 || claveValor.length > 20) {
             alert('La clave debe estar entre 7 y 20 caracteres');
-            clave.focus();
         } else {
             alert('Clave Válida');
         }
