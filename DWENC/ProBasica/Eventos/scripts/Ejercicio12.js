@@ -32,16 +32,16 @@ window.onload = () => {
     // Añadir eventos de click a los enlaces
     enlace1.addEventListener("click", (e) => {
         e.preventDefault(); // Evitar el comportamiento por defecto del enlace
-        toggleSection(enlace1, "seccion1");
+        toggleSection(e, "seccion1");
     });
 
     enlace2.addEventListener("click", (e) => {
         e.preventDefault();
-        toggleSection(enlace2, "seccion2");
+        toggleSection(e, "seccion2");
     });
 
     enlace3.addEventListener("click", (e) => {
         e.preventDefault();
-        toggleSection(enlace3, "seccion3");
+        toggleSection(e, "seccion3");
     });
 };
