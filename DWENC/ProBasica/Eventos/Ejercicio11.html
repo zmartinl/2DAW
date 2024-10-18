@@ -1,0 +1,99 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 11</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+        }
+
+        form {
+            width: 300px;
+            margin-left: 3%;
+        }
+
+        /* Estilos para el botón limpiar */
+        button#limpiar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            margin-left: 5%;
+        }
+
+        button#limpiar:hover {
+            background-color: #45a049;
+        }
+
+        button#limpiar:active {
+            background-color: #3e8e41;
+        }
+
+        button#limpiar:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        </style>
+        <script src="scripts/Ejercicio11.js"></script>
+    </head>
+    <body>
+        <h1>Coversor de Euros a Pesetas</h1>
+        <form action="">
+            <label for="euros">
+                Euros: <input type="number" id="euros">
+            </label>
+            <label for="pesetas">
+                Pesetas: <input type="number" id="pesetas" disabled>
+            </label>
+        </form>
+        <button id="limpiar">Limpiar</button>
+    </body>
+</html>
