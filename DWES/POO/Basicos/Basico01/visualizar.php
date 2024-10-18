@@ -8,7 +8,7 @@
 
     // echo 'Operando = '.$operando;
 
-    $objOpe1 = new Operaciones();
+    $objOpe1 = new Operaciones($num1,$num2);
 
-    echo 'El resultado de la operacion es : '.$objOpe1->operacion($num1,$num2,$operando);
+    echo 'El resultado de la operacion es : '.$objOpe1->operacion($operando);
 
