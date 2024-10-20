@@ -28,7 +28,7 @@ main{
 #izq{ /* Caja izquierda */
     float: left;
     width: 780px; /* 800px - 20px del padding left right*/
-    height: 340px; /* 340px - 60px del padding top bottom*/
+    height: 340px; /* 400px - 60px del padding top bottom*/
     margin: 0 20px;
     padding: 30px 10px;
     background-color: skyblue;
