@@ -16,7 +16,7 @@ body{
 /* ------- MAIN ------- */
 
 main{
-    width: 100%; /* 1260px = 100% */
+    width: 96.825%; /* 1260px = 100% */ /* 1220px = 96.825% */
     background-color: blueviolet;
     display: flow-root;
 }
@@ -77,7 +77,7 @@ img{
 /* FOOTER */
 
 footer{
-    width: 100%; /* 1260px = 100% */
+    width: 96.825%; /* 1260px = 100% */
     clear: both;
     height: 18.348%; /* 545px = 100% , 100px = 18.348 */
     background-color: red;
