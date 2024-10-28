@@ -103,10 +103,6 @@ a:hover{
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     flex-grow: 1;
-    background-image: url('../img/git.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 h2 {
@@ -123,7 +119,7 @@ h3 {
 
 p {
     font-size: 1.1em;
-    color: #2c3e50;
+    color: #1c252e;
     margin-top: 1%;
 }
 
