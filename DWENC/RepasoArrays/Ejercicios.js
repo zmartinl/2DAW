@@ -150,6 +150,18 @@ const contTarjetas = futbolistas.reduce((total, futbolista) => {
 /* ----- ACT 5 ----- */
 
 
+const mediaGoles = futbolistas.reduce((total,jugador) => {
+    
+    total[jugador.nombre] = {
+        media: jugador.goles / jugador.partidosJugados
+    };
+
+    return total;
+},{});
+
+
+console.log(mediaGoles);
+
 
 /* ----- ACT 6 ----- */
 
