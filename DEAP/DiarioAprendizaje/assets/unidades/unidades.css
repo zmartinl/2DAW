@@ -55,15 +55,6 @@ aside{
     left: 0;
 }
 
-@media (max-width: 840px) {
-    aside {
-        display: none;
-    }
-    main{
-        width: 100%;
-        margin-left: 0;
-    }
-}
 
 nav{
     width: 100%;
@@ -128,6 +119,7 @@ article>h1{
     text-align: center;
     margin-top: 1%;
 }
+
 
 .titcentrado {
     margin-top: 3%;
@@ -330,3 +322,14 @@ article>h1{
     margin: 0 auto;
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 840px) {
+    aside {
+        display: none;
+    }
+    main{
+        width: 100%;
+        margin-left: 0;
+    }
+}

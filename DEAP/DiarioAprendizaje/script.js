@@ -13,7 +13,15 @@ window.addEventListener('load', () => {
     });
 
     document.getElementById("u1").addEventListener("click",() =>{
-        window.location.href = './assets/unidades/unidad1.html'; //Pagina de los apuntes.
+        window.location.href = './assets/unidades/unidad1.html';
+    });
+
+    document.getElementById("u2").addEventListener("click",() =>{
+        window.location.href = './assets/unidades/unidad2.html'; 
+    });
+
+    document.getElementById("u3").addEventListener("click",() =>{
+        window.location.href = './assets/unidades/unidad2.html'; 
     });
     
 });

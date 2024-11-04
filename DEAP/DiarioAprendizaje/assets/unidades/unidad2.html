@@ -17,8 +17,8 @@
         <aside>
             <nav>
                 <ul>
-                    <li><a href="./unidad1.html">UNIDAD 1</a></li>
-                    <li><a href="" class="rojo">SOON</a></li>
+                    <li><a href="./unidad1.html">GIT</a></li>
+                    <li><a href="./unidad3.html">APACHE</a></li>
                     <li><a href="" class="rojo">SOON</a></li>
                     <li><a href="" class="rojo">SOON</a></li>
                     <li><a href="" class="rojo">SOON</a></li>
@@ -28,7 +28,245 @@
         <section class="content">
             <article>
                 <h1>HTTP & DNS</h1>
+                <h2>Introducción a HTTP</h2>
+                <h3>¿Que es HTTP?</h3>
+                <p>
+                    (Hypertext Transfer Protocol) es un protocolo de comunicación que se utiliza para transferir información en la web. Es la base de cualquier intercambio de datos en la web y un protocolo de comunicación de cliente-servidor.
+                </p>
+                <h2 class="titcentrado">El navegador - Cliente Web</h2>
+                <div class="gridlayout">
+                    <div>
+                        <h3>Puede Negociar</h3>
+                        <p>
+                            Puede negociar algunas caracteristicas particulares. Por ejemplo, si se soporta compresión o no.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Interpreta Informacion</h3>
+                        <p>
+                            Interpreta la información en los documentos y renderiza el documento.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Recogida de Información</h3>
+                        <p>
+                            Recoge información del usuario y la envía al servidor como parámetros en una petición web GET o POST.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Gestión de Cookies</h3>
+                        <p>
+                            Gestiona las cookies que han sido enviadas por el servidor.
+                        </p>
+                    </div>
+                </div>
+                <h2>El servidor web</h2>
+                <p>
+                    El servidor web es un programa que se ejecuta en un ordenador y que se encarga de servir documentos HTML a los clientes web. El servidor web recibe las peticiones de los clientes web y envía los documentos HTML solicitados.
+                </p>
+                <h2>El protocolo HTTP</h2>
+                <p>
+                    Es orientado a peticion / respuesta. El cliente envía una petición al servidor y el servidor responde con un mensaje de respuesta. El mensaje de respuesta contiene información sobre el estado de la petición y el documento solicitado.
+                </p>
+                <h3>Métodos que soporta</h3>
+                <div class="estadosflex">
+                    <div>
+                        <h3>GET</h3>
+                        <p>
+                            Cuando se envía una petición GET, los datos que se envían al servidor se incluyen en la URL de la solicitud.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>POST</h3>
+                        <p>
+                            El método POST se utiliza para enviar datos al servidor en el cuerpo de la solicitud, no en la URL.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>HEAD</h3>
+                        <p>
+                            El método HEAD solicita información de un recurso sin descargar su contenido. El servidor responde con los encabezados HTTP del recurso.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>PUT</h3>
+                        <p>
+                            El método PUT se utiliza para enviar datos al servidor para crear o actualizar un recurso.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>DELETE</h3>
+                        <p>
+                            El método DELETE se utiliza para eliminar un recurso del servidor.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>CONNECT</h3>
+                        <p>
+                            El método CONNECT se utiliza para establecer una conexión con el servidor.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>OPTIONS</h3>
+                        <p>
+                            El método OPTIONS se utiliza para obtener información sobre los métodos HTTP que un servidor soporta.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>TARCE</h3>
+                        <p>
+                            El método TRACE se utiliza para realizar una prueba de bucle de retorno de un mensaje de solicitud.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>PACTH</h3>
+                        <p>
+                            El método PATCH se utiliza para aplicar modificaciones parciales a un recurso.
+                        </p>
+                    </div>
+                </div>
+                <h2>El código de estado HTTP</h2>
+                <p>
+                    El código de estado HTTP es un número que se devuelve en una respuesta HTTP para indicar el resultado de la solicitud. Los códigos de estado HTTP se dividen en cinco clases. Cada clase tiene un rango de códigos de estado.
+                </p>
+                <h3>Clases de códigos de estado HTTP</h3>
+                <div class="estadosflex">
+                    <div>
+                        <h3>1XX</h3>
+                        <p>
+                            Respuestas informativas. Indican que la solicitud ha sido recibida y el servidor está procesando la solicitud.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>2XX</h3>
+                        <p>
+                            Respuestas de éxito. Indican que la solicitud fue recibida, entendida y aceptada.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>3XX</h3>
+                        <p>
+                            Redirecciones. Indican que el cliente necesita realizar una acción adicional para completar la solicitud.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>4XX</h3>
+                        <p>
+                            Errores del cliente. Indican que la solicitud contiene sintaxis incorrecta o no se puede cumplir.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>5XX</h3>
+                        <p>
+                            Errores del servidor. Indican que el servidor no pudo cumplir una solicitud aparentemente válida.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <h2>Introducción a DNS</h2>
+                <p>
+                    (Domain Name System) es un sistema de nomenclatura jerárquico para computadoras, servicios o cualquier recurso conectado a Internet o a una red privada. Traduce nombres de dominio significativos para los humanos en direcciones IP numéricas asociadas con los equipos de servicios.
+                </p>
+                <h2>¿Cómo funciona?</h2>
+                <p>
+                    Cuando escribes una dirección web en tu navegador, el navegador envía una solicitud al servidor DNS para traducir el nombre de dominio en una dirección IP. El servidor DNS busca la dirección IP asociada con el nombre de dominio y la devuelve al navegador.
+                </p>
+                <h3>¿Qué es un nombre de dominio?</h3>
+                <p>
+                    Un nombre de dominio es una cadena de caracteres que se utiliza para identificar un recurso en Internet. Los nombres de dominio se utilizan en lugar de las direcciones IP numéricas para identificar los recursos en la web.
+                </p>
+                <h2>Sistema de Nombres de Dominio</h2>
+                <div class="estadosflex">
+                    <div>
+                        <h3>1 PASO</h3>
+                        <p>
+                            Se introduce la dirección web en el navegador.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>2 PASO</h3>
+                        <p>
+                            Se solicita al ISP la dirección IP del servidor DNS.
+                    </div>
+                    <div>
+                        <h3>3 PASO</h3>
+                        <p>
+                            Se solicita la resolucion del nombre de dominio al servidor DNS.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>4 PASO</h3>
+                        <p>
+                            Se retorna con la dirección IP asociada con el nombre de dominio.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>5 PASO</h3>
+                        <p>
+                            El cliente se conecta al servidor web utilizando la dirección IP.
+                        </p>
+                    </div>
+                </div>
+                <h2>Tipos de Registros</h2>
+                <div class="estadosflex">
+                    <div>
+                        <h3>A</h3>
+                        <p>
+                            El registro A se utiliza para asociar un nombre de dominio con una dirección IP.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>AAAA</h3>
+                        <p>
+                            El registro AAAA se utiliza para asociar un nombre de dominio con una dirección IPv6.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>CNAME</h3>
+                        <p>
+                            El registro CNAME se utiliza para asociar un nombre de dominio con otro nombre de dominio.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>NS</h3>
+                        <p>
+                            El registro NS se utiliza para asociar un nombre de dominio con un servidor de nombres.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>MX</h3>
+                        <p>
+                            El registro MX se utiliza para asociar un nombre de dominio con un servidor de correo.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>PTR</h3>
+                        <p>
+                            El registro PTR se utiliza para asociar una dirección IP con un nombre de dominio.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>SOA</h3>
+                        <p>
+                            El registro SOA se utiliza para almacenar información sobre la zona de autoridad.
+                        </p>
+                    </div>
+                </div>
+                <h3>Resolución directa vs Resolución Inversa</h3>
+                <p>
+                    La resolución directa se utiliza para traducir un nombre de dominio en una dirección IP. La resolución inversa se utiliza para traducir una dirección IP en un nombre de dominio.
+                </p>
+                <p>
+                    La resolución inversa se utiliza para traducir una dirección IP en un nombre de dominio. La resolución inversa se utiliza para traducir una dirección IP en un nombre de dominio.
+                </p>
+                <h3>Herramientas DNS de consulta</h3>
+                <p>
+                    Hay varias herramientas que se pueden utilizar para consultar un servidor DNS. Algunas de las herramientas más comunes son nslookup, dig y host.
+                </p>
             </article>
+            <div class="centrar">
+                <a href="#" class="subir">Ir arriba</a>
+            </div>
         </section>
     </main>
 </body>
