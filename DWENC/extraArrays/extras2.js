@@ -53,15 +53,38 @@ const totalGolesAsistencias = futbolistas.map(jugador => {
 
 });
 
-console.log(totalGolesAsistencias);
+// console.log(totalGolesAsistencias);
 
 /**
  * ACT 2 - EXTRA: Filtrar jugadores con tarjetas rojas en algún partido: Encuentra a los jugadores que hayan recibido al menos una tarjeta roja en algún partido.
  */
 
+const jugadoresConTarjetaRoja = () => {
+    const jugadores = futbolistas.filter(jugador => jugador.partidosJugados.some(partido => partido.tarjetaRoja));
+
+    console.log(jugadores);
+};
+
+// jugadoresConTarjetaRoja();
+
 /**
  * ACT 3 - EXTRA: Listar los rivales en los que un jugador específico anotó: Pide el nombre de un jugador y, si existe en el array, devuelve una lista de los equipos rivales contra los que anotó.
  */
+
+const listarRivales = () => {
+    const jugador = prompt('Introduce el jugador');
+    
+    const futbolista = futbolistas.find(futbolista => futbolista.nombre.toLowerCase() === jugador.toLowerCase());
+
+    if(futbolista){
+        const rivales = futbolista.partidosJugados.filter(partido => partido.goles > 0).map(partido => partido.rival);
+
+        console.log(`Rivales contra los que ${futbolista.nombre} anotó:`, rivales);
+    }else
+        console.log("Jugador no encontrado");
+};
+
+listarRivales();
 
 /**
  * ACT 4 - EXTRA: Calcular el promedio de tarjetas amarillas por jugador en sus partidos: Calcula el promedio de tarjetas amarillas recibidas en los partidos para cada jugador.
