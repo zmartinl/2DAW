@@ -19,12 +19,15 @@ const arrayNombres = personas.map(persona => persona.nombre);
  *  2. Encontrar a la persona con nombre "Sara" y mostrar su nombre y edad
  */
 
-const sara = personas.filter(persona => {
-        if(persona.nombre === 'Sara'){
-            console.log(`Nombre: ${persona.nombre} Edad: ${persona.edad}`);
-        }
-    });
+const encontrarSara = () => {
+    const sara = personas.find(persona => persona.nombre === "Sara");
 
+    if(sara){
+        console.log(`Nombre : ${sara.nombre}, Edad: ${sara.edad}`);
+    }
+};
+
+// encontrarSara();
 
 /**
  *  3. Almacenar en un array nuevo llamado "mayoresDe25" todas las personas que sean mayores de 25 y mostrarlos por pantalla
@@ -32,7 +35,7 @@ const sara = personas.filter(persona => {
 
 const mayores25 = personas.filter(persona => persona.edad > 25);
 
-// console.log(mayores25);
+console.log(mayores25);
 
 /**
  *  4. Calcular la edad promedio de todas las personas
@@ -100,7 +103,7 @@ const mayorEdad = () => {
     console.log(mayorEdad);
 };
 
-// mayorEdad();
+mayorEdad();
 
 /**
  * 10. Comprobar si todas las personas son mayores de 20 años y mostrar un mensaje por pantalla ("Son mayores de 20") en caso de que sea cierto.
