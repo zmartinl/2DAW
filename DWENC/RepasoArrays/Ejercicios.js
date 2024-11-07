@@ -10,6 +10,19 @@
  *     - ACT 5 - Obtener el promedio de goles por partido para cada jugador                   *
  *     - ACT 6 - Encontrar el jugador con más asistencias                                     *
  *     - ACT 7 - Listar los nombres de los jugadores por posición                             *
+ *     - ACT 8 - Filtrar a los jugadores que tienen más de 10 asistencias                     *
+ *     - ACT 9 - Crear una lista de los equipos sin jugadores repetidos                       *
+ *     - ACT 10 - Encontrar el jugador con la mayor cantidad de goles por partido             *
+ *     - ACT 11 - Calcular el promedio de asistencias por jugador                             *
+ *     - ACT 12 - Obtener el jugador con la menor cantidad de tarjetas amarillas              *
+ *     - ACT 13 - Agrupar los jugadores por equipo                                            *
+ *     - ACT 14 - Contar cuántos jugadores hay en cada posición                               *
+ *     - ACT 15 - Crear una lista con los nombres de los jugadores y sus goles                *
+ *     - ACT 16 - Filtrar jugadores con menos de 5 tarjetas amarillas                         *
+ *     - ACT 17 - Listar los nombres de los jugadores y el equipo donde juegan                *
+ *     - ACT 18 - Crear un nuevo array con los jugadores que tienen tarjetas rojas            *
+ *     - ACT 19 - Encontrar el jugador con el menor promedio de goles por partido             *
+ *     - ACT 20 - Sumar las tarjetas amarillas y rojas de cada equipo                         *
  *********************************************************************************************/
 
 const futbolistas = [
@@ -186,3 +199,96 @@ const posicionJugadores = futbolistas.reduce((total,futbolista) => {
 }, {});
 
 // console.log(posicionJugadores);
+
+/* ----- ACT 8 ----- */
+
+let mas10Asistencias = futbolistas.filter(jugador => jugador.asistencias > 10);
+
+
+/* ----- ACT 9 ----- */
+
+let listaEquiposSinRepetir = [...new Set(futbolistas.map(futbolista => futbolista.equipo))];
+
+
+/* ----- ACT 10 ----- */
+
+let mayorGoles = () => {
+    let numMayor = Math.max(...futbolistas.map(futbolista => futbolista.goles));
+    let mayorGoles = futbolistas.filter(futbolista => futbolista.goles === numMayor);
+
+    console.log(mayorGoles);
+};
+
+/* ----- ACT 11 ----- */
+
+let promedioAsistencias = futbolistas.map(futbolista => {
+    return {
+        nombre: futbolista.nombre,
+        promedioAsistencias: (futbolista.asistencias / futbolista.partidosJugados)
+    };
+});
+
+/* ----- ACT 12 ----- */
+
+let menorTarjetasAmarillas = () => {
+    let numMenor = Math.min(...futbolistas.map(futbolista => futbolista.tarjetaAmarilla));
+
+    let jugadorMenor = futbolistas.filter(futbolista => futbolista.tarjetaAmarilla === numMenor);
+};
+
+/* ----- ACT 13 ----- */
+
+let agruparPorEquipo = futbolistas.reduce((total,jugador) => {
+    let equipo = jugador.equipo;
+
+    if(!total[equipo]){
+        total[equipo] = [];
+    }
+
+    total[equipo].push(jugador.nombre);
+
+    return total;
+},{});
+
+/* ----- ACT 14 ----- */
+
+let jugadoresPorPosicion = futbolistas.reduce((posiciones,jugador) => {
+    let posicion = jugador.posicion;
+
+    if(!posiciones[posicion])
+        posiciones[posicion] = 0;
+
+    posiciones[posicion] += 1;
+
+    return posiciones;
+},{});
+
+/* ----- ACT 15 ----- */
+
+let actividad15 = futbolistas.map(jugador => {
+    return {
+        nombre: jugador.nombre,
+        goles: jugador.goles
+    };
+});
+
+/* ----- ACT 16 ----- */
+
+let menosDe5Amarillas = futbolistas.filter(futbolista => futbolista.tarjetaAmarilla < 5);
+
+/* ----- ACT 17 ----- */
+
+let jugadoresEquipos = futbolistas.map(jugador => {
+    return {
+        nombre: jugador.nombre,
+        equipo: jugador.equipo
+    }
+});
+
+/* ----- ACT 18 ----- */
+
+let tarjetasRojas = futbolistas.filter(jugador => jugador.tarjetaRoja > 0);
+
+/* ----- ACT 19 ----- */
+
+
