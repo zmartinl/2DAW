@@ -65,7 +65,16 @@ nav a.activo{
 }
 
 @media(max-width:995px){
+    .logo {
+        position: fixed;
+        top: 0;
+        left: 9%;
+        z-index: 101;
+        padding: 1rem 0;
+    }
+
     nav{
+        margin-top: 5rem;
         position: absolute;
         display: none;
         top: 0;
@@ -94,6 +103,10 @@ nav a.activo{
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #6a92c2;
+    }
+
+    .texto-escribiendo{
+        font-size: 31px;
     }
 }
 
