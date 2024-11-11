@@ -66,10 +66,6 @@ nav a.activo{
 
 @media(max-width:995px){
     .logo {
-        position: fixed;
-        top: 0;
-        left: 9%;
-        z-index: 101;
         padding: 1rem 0;
     }
 
