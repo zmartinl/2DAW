@@ -49,6 +49,21 @@ header{
     transform: scale(1.1);
 }
 
+body>a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+body>a:hover,
+body>a.activo{
+    color: #6a92c2;
+    border-bottom: 3px solid #6a92c2;
+}
+
 nav a{
     font-size: 1.8rem;
     color: white;
@@ -64,51 +79,6 @@ nav a.activo{
     border-bottom: 3px solid #6a92c2;
 }
 
-@media(max-width:995px){
-    .logo {
-        position: fixed;
-        top: 0;
-        left: 9%;
-        z-index: 101;
-        padding: 1rem 0;
-    }
-
-    nav{
-        margin-top: 5rem;
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #6a92c2;
-        border-bottom: 3px solid #6a92c2;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-    }
-
-    nav.activo{
-        display: block;
-    }
-
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.activo{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #6a92c2;
-    }
-
-    .texto-escribiendo{
-        font-size: 3px;
-    }
-}
 
 section{
     min-height: 100vh;
@@ -278,5 +248,71 @@ span{
     .imagen-inicio img{
         width: 70vw;
         margin-top: 4rem;
+    }
+
+    .logo {
+        position: fixed;
+        top: 0;
+        left: 9%;
+        z-index: 101;
+        padding: 1rem 0;
+    }
+
+    nav{
+        margin-top: 5rem;
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #6a92c2;
+        border-bottom: 3px solid #6a92c2;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.activo{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.activo{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #6a92c2;
+    }
+}
+
+@media(max-width: 490px){
+    .contenido-inicio h3{
+        font-size: 2rem;
+    }
+
+    .contenido-inicio h1{
+        font-size: 4rem;
+    }
+
+    .imagen-inicio img{
+        width: 80vw;
+    }
+
+    .logo{
+        left: 4%;
+    }
+
+    nav{
+        width: 60%;
+    }
+    
+    header>a{
+        display: none;
     }
 }
