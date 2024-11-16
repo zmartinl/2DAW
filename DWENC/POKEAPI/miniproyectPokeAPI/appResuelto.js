@@ -62,9 +62,7 @@ function buscarPokemonJQueryAJAX(){
     $.ajax({
         url: `https://pokeapi.co/api/v2/pokemon/${nombre}`,
         method: 'GET',
-        success: (data) => {
-            console.log(data);
-            
+        success: (data) => {            
             $('#pokemon-data').empty();
 
             const h1 = $('<h1>').text(`Nombre: ${data.name}`);
@@ -86,7 +84,7 @@ function buscarPokemonJQueryAJAX(){
         },
         error: () => {
             console.error("Error al cargar la API");
-            $('#pokemon-data').html('<p>No se ha podido encontrar al pokemon buscado');
+            $('#pokemon-data').html('<p>No se ha podido encontrar al pokemon buscado</p>');
         }
     });
 }
