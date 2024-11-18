@@ -12,37 +12,47 @@ const dataPokemon = document.getElementById('pokemon-data');
  * 
 */
 
-async function buscarPokemon(){
-    const nombreMinusculas = nombre.value.toLowerCase();
-    fetch(`https://pokeapi.co/api/v2/pokemon/${nombreMinusculas}`)
-    .then(response => {
-        if(!response.ok)
-            throw new Error ('Error al cargar la API');
-        return response.json();
-    })
-    .then(data => {
+async function buscarPokemon() {
+    try {
+        const nombreMinusculas = nombre.value.toLowerCase();
+
+        // Esperamos la respuesta de la API
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombreMinusculas}`);
+        if (!response.ok) {
+            throw new Error('Error al cargar la API');
+        }
+
+        // Procesamos la respuesta como JSON
+        const data = await response.json();
+
+        // Limpiamos el contenido anterior
         dataPokemon.innerHTML = '';
 
+        // Creamos los elementos necesarios
         let h1 = document.createElement('h1');
         let h2 = document.createElement('h2');
         let imagen = document.createElement('img');
 
+        // Extraemos los datos de la respuesta
         const id = data.id;
         const sprite = data.sprites.front_default;
 
         h1.textContent = `Nombre: ${nombre.value}`;
         h2.textContent = `ID: ${id}`;
-
         imagen.src = sprite;
-        imagen.alt = `${nombre}`
+        imagen.alt = `${nombre.value}`;
         imagen.style.width = '150px';
 
+        // Añadimos los elementos al contenedor
         dataPokemon.appendChild(h1);
         dataPokemon.appendChild(h2);
-        dataPokemon.appendChild(imagen)
-    })
-    .catch(error => console.error(error));
+        dataPokemon.appendChild(imagen);
+    } catch (error) {
+        // Manejamos errores
+        console.error(error);
+    }
 }
+
 
 // btnBuscar.addEventListener('click', buscarPokemon);
 
