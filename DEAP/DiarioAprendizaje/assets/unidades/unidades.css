@@ -224,6 +224,12 @@ article>h1{
     transition: 0.7s;
 }
 
+.linkPresentacion {
+    color: #e94560;
+    text-decoration: none;
+    display: inline;
+}
+
 
 /* Boton volver inicio*/
 

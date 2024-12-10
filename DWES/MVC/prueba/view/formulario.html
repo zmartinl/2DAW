@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Preguntas</title>
+</head>
+<body>
+    <h1>Crear Pregunta</h1>
+    <form action="/add-question" method="POST">
+        <!-- Campo para el título de la pregunta -->
+        <label for="question">Pregunta:</label><br>
+        <textarea id="question" name="question" placeholder="Escribe la pregunta aquí..." rows="3" required></textarea><br><br>
+
+        <!-- Campo para la opción 1 -->
+        <label for="option1">Opción 1:</label><br>
+        <input type="text" id="option1" name="option1" placeholder="Escribe la primera opción" required><br><br>
+
+        <!-- Campo para la opción 2 -->
+        <label for="option2">Opción 2:</label><br>
+        <input type="text" id="option2" name="option2" placeholder="Escribe la segunda opción" required><br><br>
+
+        <!-- Campo para la opción 3 -->
+        <label for="option3">Opción 3 (opcional):</label><br>
+        <input type="text" id="option3" name="option3" placeholder="Escribe la tercera opción"><br><br>
+
+        <!-- Campo para la opción 4 -->
+        <label for="option4">Opción 4 (opcional):</label><br>
+        <input type="text" id="option4" name="option4" placeholder="Escribe la cuarta opción"><br><br>
+
+        <!-- Campo para indicar la respuesta correcta -->
+        <label for="correct">Respuesta correcta:</label><br>
+        <select id="correct" name="correct" required>
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+            <option value="3">Opción 3</option>
+            <option value="4">Opción 4</option>
+        </select><br><br>
+
+        <button type="submit">Añadir Pregunta</button>
+    </form>
+</body>
+</html>

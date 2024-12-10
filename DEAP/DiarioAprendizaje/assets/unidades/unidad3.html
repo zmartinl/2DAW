@@ -28,7 +28,84 @@
         <section class="content">
             <article>
                 <h1>APACHE</h1>
-                
+                <p>Es un servidor web HTTP de código abierto, para plataformas Unix (BSD, GNU/Linux, etc.), Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la noción de sitio virtual. Cuando se instala, se crea un servidor web que se ejecuta en segundo
+                plano, esperando peticiones de los clientes. Cuando llega una petición, el servidor la satisface devolviendo al cliente el contenido solicitado.</p>
+                <h2>Instalación 
+                ( 
+                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vQLciK0MID6gDcTfMB3dkn-tu_AkqYVAF0lHpbv0SZX8lq3JL0v8_C1KgpSQBtd2FOgonWnzr94NsVy/pub?start=false&loop=false&delayms=5000" class="linkPresentacion" target="_blank">Ver presentación</a>
+                )</h2>
+                <h2>Configuración</h2>
+                <p>La configuración de Apache se realiza mediante archivos de texto. El archivo principal de configuración es httpd.conf, que se encuentra en el directorio de instalación de Apache. En este archivo se definen los parámetros de configuración del servidor, como el puerto en el que escucha, el número máximo de conexiones simultáneas, el directorio raíz de los documentos, etc.</p>
+                <h2>Virtual Hosts</h2>
+                <p>Un servidor virtual es un servidor web que comparte el mismo servidor físico con otros servidores virtuales. En un servidor virtual, se pueden alojar varios sitios web, cada uno con su propio nombre de dominio. Para configurar un servidor virtual en Apache, se debe añadir una sección al archivo de configuración httpd.conf con la siguiente estructura:</p>
+                <pre>
+                    <code>
+                        &lt;VirtualHost *:80&gt;
+                            ServerName www.ejemplo.com
+                            DocumentRoot /var/www/ejemplo
+                        &lt;/VirtualHost&gt;
+                    </code>
+                </pre>
+                <p>En este ejemplo, se define un servidor virtual que escucha en el puerto 80 y responde a las peticiones de www.ejemplo.com. Los documentos del sitio se encuentran en el directorio /var/www/ejemplo.</p>
+                <h2>Modulos</h2>
+                <p>Apache es un servidor modular, lo que significa que se puede extender con módulos que añaden funcionalidades adicionales. Algunos módulos que se pueden añadir a Apache son:</p>
+                <div class="estadosflex">
+                    <div>
+                        <h3>MOD_SSL</h3>
+                        <p>Añade soporte para SSL/TLS</p>
+                    </div>
+                    <div>
+                        <h3>MOD_PHP</h3>
+                        <p>Permite ejecutar scripts PHP</p>
+                    </div>
+                    <div>
+                        <h3>MOD_REWRITE</h3>
+                        <p>Permite reescribir las URLs de las peticiones</p>
+                    </div>
+                    <div>
+                        <h3>MOD_PROXY</h3>
+                        <p>Añade soporte para servidores proxy</p>
+                    </div>
+                </div>
+                <h2>Logs</h2>
+                <p>Apache genera varios archivos de log en los que registra información sobre las peticiones que recibe y los errores que se producen. Algunos de los archivos de log más importantes son:</p>
+                <div class="estadosflex">
+                    <div>
+                        <h3>access_log</h3>
+                        <p>Registra información sobre las peticiones que recibe el servidor.</p>
+                    </div>
+                    <div>
+                        <h3>error_log</h3>
+                        <p>Registra los errores que se producen en el servidor.</p>
+                    </div>
+                    <div>
+                        <h3>ssl_access_log</h3>
+                        <p>Registra información sobre las peticiones HTTPS.</p>
+                    </div>
+                    <div>
+                        <h3>ssl_error_log</h3>
+                        <p>Registra los errores HTTPS.</p>
+                    </div>
+                </div>
+                <h2>Seguridad</h2>
+                <p>Apache es un servidor web muy seguro, pero es importante configurarlo correctamente para evitar problemas de seguridad. Algunas recomendaciones para mejorar la seguridad de Apache son:</p>
+                <p class="cardcomando">
+                    Actualizar Apache y los módulos regularmente.
+                </p>
+                <p class="cardcomando">
+                    Configurar correctamente los permisos de los archivos y directorios.
+                </p>
+                <p class="cardcomando">
+                    Utilizar SSL/TLS para cifrar las comunicaciones.
+                </p>
+                <p class="cardcomando">
+                    Proteger los archivos de configuración.
+                </p>
+                <h2>Directivas Básicas 
+                    ( 
+                        <a href="https://docs.google.com/presentation/d/e/2PACX-1vRbowAE_q9ImGJm3wEafmjF9EpBJ7XNATaxt-XfHZDlfXdqgzDoE-u1JtcD8oiOxEgX53A4PE_bwgUe/pub?start=false&loop=false&delayms=5000" class="linkPresentacion" target="_blank">Ver presentación</a>
+                    )
+                </h2>
             </article>
             <div class="centrar">
                 <a href="#" class="subir">Ir arriba</a>
